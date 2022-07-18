@@ -1,4 +1,4 @@
-module github.com/gcesconeto/go_tutorial
+module github.com/gcesconeto/go_tutorial/hello
 
 go 1.18
 
