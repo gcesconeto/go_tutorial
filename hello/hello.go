@@ -2,15 +2,24 @@ package main
 
 import (
 	"fmt"
-
-	quote "rsc.io/quote"
+	"log"
 
 	"github.com/gcesconeto/go_tutorial/greetings"
+	"rsc.io/quote"
 )
 
 func main() {
 	fmt.Println("Hello, Gopher!")
 	fmt.Println(quote.Go())
-	message := greetings.Hello("Gladys")
+
+	log.SetPrefix("greetings error: ")
+	log.SetFlags(0)
+
+	message, err := greetings.Hello("")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(message)
 }
