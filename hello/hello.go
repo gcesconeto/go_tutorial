@@ -21,5 +21,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	names := []string{"Luizinho", "Huguinho", "Zezinho"}
+	messages, errs := greetings.Hellos(names)
+
+	if errs != nil {
+		log.Fatal(errs)
+	}
 	fmt.Println(message)
+	fmt.Println(messages)
 }
